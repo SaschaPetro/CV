@@ -1,8 +1,6 @@
 /*General Styling*/
 /*Create a global box sizing that uses box-sizing: border-box*/
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
@@ -20,7 +18,44 @@ h6 {
   font-family: "Lora", serif;
 }
 
+h1 {
+  font-size: 86px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(145, 72, 82);
+}
+
+/*Remove the default margin from the <body> element*/
+body {
+  margin: 0;
+}
+
 /*Specific Styling*/
 /*Specific Styling should be based on classes*/
 
-/**/
+/*Add a padding to the header and main element within the body*/
+.header {
+  padding: 25px;
+  text-align: center;
+  background-color: rgb(59, 58, 65);
+}
+
+.main {
+  padding: 70px;
+  margin: 0 auto;
+}
+
+.header-second {
+  color: rgb(145, 72, 82);
+  font-size: 54px;
+}
+
+[href] {
+  color: rgb(145, 72, 82);
+}
