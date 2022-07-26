@@ -41,7 +41,7 @@ body {
 
 /*Add a padding to the header and main element within the body*/
 .header {
-  padding: 25px;
+  padding: 18px;
   text-align: center;
   background-color: rgb(59, 58, 65);
 }
