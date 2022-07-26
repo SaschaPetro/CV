@@ -1,0 +1,24 @@
+/*General Styling*/
+/*Create a global box sizing that uses box-sizing: border-box*/
+* {
+  box-sizing: border-box;
+}
+
+/*Define a default font for your document*/
+html {
+  font-family: "Cormorant SC", serif;
+}
+/*Define a different font for all heading elements*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+
+/*Specific Styling*/
+/*Specific Styling should be based on classes*/
+
+/**/
