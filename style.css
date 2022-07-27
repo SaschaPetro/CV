@@ -57,29 +57,33 @@ body {
   color: #00adb5;
   font-size: 54px;
 }
-
+/* Add spacing between the different areas of your main content*/
 .main > * + * {
   margin-top: 50px;
 }
 
-.main > * {
-  border-top: 2px solid #222831;
-}
-
-.main > *:first-child {
-  border-top: none;
-}
-
+/* Add spacing between the navigation links */
+/*Add a general color for the navigation links*/
 .nav-link {
   padding: 60px;
   color: #00adb5;
   font-size: 22px;
 }
 
+/* Add specific styling for the :hover and :active state  */
 .nav-link:hover {
   color: #692d43;
 }
 
 .nav-link:active {
   color: #034e98;
+}
+
+/*Use the border property to draw a line over each article of the main content except for the first one*/
+.main > * {
+  border-top: 2px solid #222831;
+}
+
+.main > *:first-child {
+  border-top: none;
 }
