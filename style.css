@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgb(145, 72, 82);
+  color: #00adb5;
 }
 
 /*Remove the default margin from the <body> element*/
@@ -41,21 +41,45 @@ body {
 
 /*Add a padding to the header and main element within the body*/
 .header {
-  padding: 18px;
+  background-color: #222831;
+  padding-bottom: 60px;
+  padding-top: 30px;
   text-align: center;
-  background-color: rgb(59, 58, 65);
 }
 
 .main {
-  padding: 70px;
+  max-width: 800px;
+  padding: 16px;
   margin: 0 auto;
 }
 
 .header-second {
-  color: rgb(145, 72, 82);
+  color: #00adb5;
   font-size: 54px;
 }
 
-[href] {
-  color: rgb(145, 72, 82);
+.main > * + * {
+  margin-top: 50px;
+}
+
+.main > * {
+  border-top: 2px solid #222831;
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
+.nav-link {
+  padding: 60px;
+  color: #00adb5;
+  font-size: 22px;
+}
+
+.nav-link:hover {
+  color: #692d43;
+}
+
+.nav-link:active {
+  color: #034e98;
 }
