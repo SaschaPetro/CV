@@ -65,7 +65,7 @@ body {
 /* Add spacing between the navigation links */
 /*Add a general color for the navigation links*/
 .nav-link {
-  padding: 60px;
+  padding: 50px;
   color: #00adb5;
   font-size: 22px;
 }
