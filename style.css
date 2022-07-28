@@ -53,9 +53,12 @@ body {
   margin: 0 auto;
 }
 
-.header-second {
+.profession {
   color: #00adb5;
   font-size: 54px;
+}
+.profession::after {
+  content: "🦾";
 }
 /* Add spacing between the different areas of your main content*/
 .main > * + * {
@@ -86,4 +89,15 @@ body {
 
 .main > *:first-child {
   border-top: none;
+}
+
+/*Change the selection style of the document*/
+::selection {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* The general font family should be inherited from the <html> element*/
+html {
+  font: inherit;
 }
