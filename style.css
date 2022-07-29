@@ -101,3 +101,12 @@ body {
 html {
   font: inherit;
 }
+
+/* Use the display property to show the experience heading and sub heading in one line*/
+.experiences-heading {
+  display: inline-block;
+}
+
+.experiences-sub {
+  display: inline-block;
+}
