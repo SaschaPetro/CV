@@ -5,8 +5,11 @@
 }
 
 /*Define a default font for your document*/
+/* The general font family should be inherited from the <html> element*/
 html {
   font-family: "Cormorant SC", serif;
+  font-size: 20px;
+  font: inherit
 }
 /*Define a different font for all heading elements*/
 h1,
@@ -16,10 +19,11 @@ h4,
 h5,
 h6 {
   font-family: "Lora", serif;
+  font-size: 2rem;
 }
 
 h1 {
-  font-size: 86px;
+  font-size: 4rem;
 }
 
 h1,
@@ -42,35 +46,34 @@ body {
 /*Add a padding to the header and main element within the body*/
 .header {
   background-color: #222831;
-  padding-bottom: 60px;
-  padding-top: 30px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   text-align: center;
 }
 
 .main {
-  max-width: 800px;
-  padding: 16px;
+  max-width: 110ch;
+  padding: 2rem;
   margin: 0 auto;
 }
 
 .profession {
   color: #00adb5;
-  font-size: 54px;
 }
 .profession::after {
   content: "🦾";
 }
 /* Add spacing between the different areas of your main content*/
 .main > * + * {
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 
 /* Add spacing between the navigation links */
 /*Add a general color for the navigation links*/
 .nav-link {
-  padding: 50px;
+  padding: 3rem;
   color: #00adb5;
-  font-size: 22px;
+  font-size: 2rem;
 }
 
 /* Add specific styling for the :hover and :active state  */
@@ -84,7 +87,8 @@ body {
 
 /*Use the border property to draw a line over each article of the main content except for the first one*/
 .main > * {
-  border-top: 2px solid #222831;
+  border-top: 0.2rem solid #222831;
+  padding: 0 2rem;
 }
 
 .main > *:first-child {
@@ -97,11 +101,6 @@ body {
   color: whitesmoke;
 }
 
-/* The general font family should be inherited from the <html> element*/
-html {
-  font: inherit;
-}
-
 /* Use the display property to show the experience heading and sub heading in one line*/
 .experiences-heading {
   display: inline-block;
@@ -110,3 +109,34 @@ html {
 .experiences-sub {
   display: inline-block;
 }
+
+.main article {
+    padding left: 20rem ;
+}
+
+.article-heading { 
+    position: relative;
+    left: -2rem
+}
+
+.hire-me {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    padding: 1rem;
+    background-color: azure;
+    border-style: solid black;
+    border-radius: 0.5rem;
+    color: #222831;
+}
+
+.heading-group {
+    font-size: 5rem;
+}
+.Main-Heading {
+    font-size: 1em;
+}
+
+.profession {
+    font-size: 0.25em;
+  }
