@@ -53,9 +53,15 @@ h3 {
 
 /* Introduce breakpoints for medium and large screens
  Increase the overall font size at both breakpoints*/
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -99,6 +105,7 @@ h3 {
   padding-bottom: 2rem;
   padding-top: 2rem;
   text-align: center;
+  transform: skewY(-8deg);
 }
 
 .main {
@@ -110,9 +117,11 @@ h3 {
 .profession {
   color: #00adb5;
 }
+
 .profession::after {
   content: "🦾";
 }
+
 /* Add spacing between the different areas of your main content*/
 .main > * + * {
   margin-top: 3rem;
@@ -143,6 +152,7 @@ h3 {
 
 .main > *:first-child {
   border-top: none;
+  padding-top: 2rem;
 }
 
 /* Use the display property to show the experience heading and sub heading in one line*/
@@ -152,6 +162,7 @@ h3 {
 
 .experiences-sub {
   display: inline-block;
+  padding-inline: 2rem;
 }
 
 .main article {
@@ -177,13 +188,14 @@ h3 {
 .heading-group {
   font-size: 8rem;
 }
+
 .Main-Heading {
   font-size: 1em;
+  margin: auto;
+  padding-top: 3rem;
 }
 
 .profession {
   position: relative;
   font-size: 0.25em;
-  margin-top: -3rem;
-  margin-bottom: 5rem;
 }
