@@ -1,9 +1,31 @@
-/*----------------general styling---------------------*/
+g /*----------------general styling---------------------*/
 
 /*Create a global box sizing that uses box-sizing: border-box*/
 *,
 *::before *::after {
   box-sizing: border-box;
+}
+
+/* Introduce breakpoints for medium and large screens
+ Increase the overall font size at both breakpoints*/
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Increase the spacing between the main articles beginning with the medium break point */
+@media print {
+  .main > * + * {
+    margin-top: 5rem;
+  }
 }
 
 /*Define a default font for your document*/
@@ -21,14 +43,6 @@ body {
 
 h1 {
   font-size: 4rem;
-}
-
-/*Define a different font for all heading elements*/
-
-h2,
-h3 {
-  font-family: "Lora", serif;
-  font-size: 2rem;
 }
 
 /*Define a different font for all heading elements*/
@@ -61,7 +75,13 @@ h3 {
   padding-top: 2rem;
   text-align: center;
   transform: skewY(-8deg);
-  width: 100%;
+  width: 100vw;
+}
+
+@media print {
+  .navigation {
+    display: none;
+  }
 }
 
 .main {
@@ -70,21 +90,12 @@ h3 {
   margin: 0 auto;
 }
 
-.hire-me {
-  position: fixed;
-}
-
 .profession {
   color: #00adb5;
 }
 
 .profession::after {
   content: "🦾";
-}
-
-/* Add spacing between the different areas of your main content*/
-.main > * + * {
-  margin-top: 3rem;
 }
 
 /* Add spacing between the navigation links */
@@ -104,10 +115,12 @@ h3 {
   color: #034e98;
 }
 
+/* Add spacing between the different areas of your main content*/
 /*Use the border property to draw a line over each article of the main content except for the first one*/
 .main > * {
   border-top: 0.2rem solid #222831;
   padding: 0 2rem;
+  margin-top: 3rem;
 }
 
 .main > *:first-child {
@@ -134,15 +147,40 @@ h3 {
   left: -2rem;
 }
 
-.hire-me {
-  position: fixed;
-  top: 10rem;
-  right: 3rem;
-  padding: 1rem;
-  background-color: rgb(108, 0, 130);
-  border-style: solid light-grey;
-  border-radius: 1rem;
-  color: #ffffff;
+@media screen and (max-width: 992px) {
+  .hire-me {
+    margin: auto;
+    width: fit-content;
+    margin-top: 1em;
+    padding: 1rem;
+    background-color: rgb(108, 0, 130);
+    border-style: solid light-grey;
+    border-radius: 1rem;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    display: none;
+  }
+  .hire-me2 {
+    position: fixed;
+    top: 10rem;
+    right: 3rem;
+    padding: 1rem;
+    background-color: rgb(108, 0, 130);
+    border-style: solid light-grey;
+    border-radius: 1rem;
+    color: #ffffff;
+    transform: skewY(-8deg);
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
 }
 
 .heading-group {
@@ -155,44 +193,4 @@ h3 {
 
 .profession {
   font-size: 0.25em;
-}
-
-/* Introduce breakpoints for medium and large screens
- Increase the overall font size at both breakpoints*/
-
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media print {
-  .hire-me {
-    display: none;
-  }
-}
-
-@media print {
-  .navigation {
-    display: none;
-  }
-}
-
-/* Increase the spacing between the main articles beginning with the medium break point */
-@media print {
-  .main > * + * {
-    margin-top: 5rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .hire-me {
-    position: fixed;
-  }
 }

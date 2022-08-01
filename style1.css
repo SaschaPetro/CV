@@ -1,0 +1,132 @@
+/**************************************************************/
+/* General Stylings */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Cormorant SC", serif;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+body {
+  margin: 0;
+}
+*::selection {
+  background-color: plum;
+}
+/**************************************************************/
+/* Specific Stylings */
+.header {
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
+  text-align: center;
+  background-color: #eee;
+  position: relative;
+}
+.heading-group {
+  font-size: 4rem;
+}
+.main-heading {
+  font-size: 1em;
+}
+.profession {
+  font-size: 0.25em;
+}
+.profession::after {
+  content: "🕺";
+}
+.hire-me {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: plum;
+  color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+.nav-link {
+  padding: 0.25rem 0.5rem;
+  color: black;
+}
+.nav-link:hover {
+  color: black;
+  background-color: lightgray;
+}
+.nav-link:active {
+  color: white;
+  background-color: grey;
+}
+.nav-link + .nav-link {
+  margin-left: 1rem;
+}
+.main {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.main > * + * {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
+}
+
+.main > * {
+  border-top: 0.125rem solid grey;
+  padding: 0 1rem;
+}
+.main > *:first-child {
+  border-top: none;
+}
+.article-heading {
+  position: relative;
+  left: -1rem;
+}
+.experience-heading {
+  display: inline-block;
+}
+.experience-subheading {
+  display: inline-block;
+}
