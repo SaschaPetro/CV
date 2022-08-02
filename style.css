@@ -3,6 +3,7 @@ g /*----------------general styling---------------------*/
 /*Create a global box sizing that uses box-sizing: border-box*/
 *,
 *::before *::after {
+  background-color: #222831;
   box-sizing: border-box;
 }
 
@@ -12,6 +13,40 @@ g /*----------------general styling---------------------*/
 @media screen and (min-width: 768px) {
   html {
     font-size: 16px;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link + .nav-link {
+    margin-top: -5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -70,7 +105,21 @@ h3 {
 
 /*Add a padding to the header and main element within the body*/
 .header {
-  background-color: #222831;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   padding-bottom: 2rem;
   padding-top: 2rem;
   text-align: center;
@@ -128,14 +177,18 @@ h3 {
   padding-top: 2rem;
 }
 
-/* Use the display property to show the experience heading and sub heading in one line*/
-.experiences-heading {
-  display: inline-block;
+.experiences-header {
+  display: flex;
+  flex-direction: column;
 }
 
-.experiences-sub {
-  display: inline-block;
-  padding-inline: 2rem;
+@media screen and (min-width: 768px) {
+  .experiences-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .main article {
@@ -192,5 +245,28 @@ h3 {
 }
 
 .profession {
-  font-size: 0.25em;
+  font-size: 0.5em;
+}
+
+.footer {
+  background-color: #222831;
+  max-width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.button:hover {
+  box-shadow: 0 2rem 1rem 0 rgba(160, 160, 160, 0),
+    0rem 1rem 1rem 0 rgba(255, 255, 255, 0.363);
 }
