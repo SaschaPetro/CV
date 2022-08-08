@@ -1,9 +1,20 @@
-g /*----------------general styling---------------------*/
+/*----------------general styling---------------------*/
+:root {
+  --background-color: whitesmoke;
+  --text-color: black;
+  --heading-color: #6320ee;
+  --background-header: black;
+  --background-header-2: white;
+  --accent-header: rgba(255, 255, 255, 0.2);
+  --footer-color: #cad5ca;
+  --hire-me-button: rgb(108, 0, 130);
+  --nav-background: grey;
+}
 
 /*Create a global box sizing that uses box-sizing: border-box*/
 *,
-*::before *::after {
-  background-color: #222831;
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -24,13 +35,7 @@ g /*----------------general styling---------------------*/
 
 @media screen and (min-width: 768px) {
   .nav-link + .nav-link {
-    margin-left: 7rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-link + .nav-link {
-    margin-top: -5rem;
+    margin-left: 1rem;
   }
 }
 
@@ -52,7 +57,7 @@ g /*----------------general styling---------------------*/
 
 @media screen and (min-width: 992px) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -66,7 +71,7 @@ g /*----------------general styling---------------------*/
 /*Define a default font for your document*/
 /* The general font family should be inherited from the <html> element*/
 html {
-  font-family: "Cormorant SC", serif;
+  font-family: "Cinzel", serif;
   font-size: 20px;
   font: inherit;
 }
@@ -77,27 +82,27 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 /*Define a different font for all heading elements*/
 
 h2,
 h3 {
-  font-family: "Lora", serif;
-  font-size: 2rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.5rem;
 }
 
 h1,
 h2,
 h3 {
-  color: #00adb5;
+  color: var(--heading-color);
 }
 
 /*Change the selection style of the document*/
 ::selection {
-  background-color: black;
-  color: whitesmoke;
+  background-color: var(--backgroun-header);
+  color: var(--background-color);
 }
 
 /*----------------Specific Styling---------------------*/
@@ -105,26 +110,11 @@ h3 {
 
 /*Add a padding to the header and main element within the body*/
 .header {
-  background-color: black;
-  background-image: radial-gradient(
-      white,
-      rgba(255, 255, 255, 0.2) 2px,
-      transparent 40px
-    ),
-    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
-    radial-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 30px
-    );
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  background-color: var(--background-header);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   text-align: center;
   transform: skewY(-8deg);
-  width: 100vw;
 }
 
 @media print {
@@ -135,12 +125,12 @@ h3 {
 
 .main {
   max-width: 110ch;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto;
 }
 
 .profession {
-  color: #00adb5;
+  color: var(--heading-color);
 }
 
 .profession::after {
@@ -150,24 +140,25 @@ h3 {
 /* Add spacing between the navigation links */
 /*Add a general color for the navigation links*/
 .nav-link {
-  padding: 3rem;
-  color: #00adb5;
+  padding: 1.3rem;
+  color: var(--heading-color);
   font-size: 2rem;
+  transition: background-color 0.5s ease-in-out;
 }
 
 /* Add specific styling for the :hover and :active state  */
 .nav-link:hover {
-  color: #692d43;
+  background-color: wheat;
 }
 
 .nav-link:active {
-  color: #034e98;
+  color: var(--heading-color);
 }
 
 /* Add spacing between the different areas of your main content*/
 /*Use the border property to draw a line over each article of the main content except for the first one*/
 .main > * {
-  border-top: 0.2rem solid #222831;
+  border-top: 0.2rem solid var(--text-color);
   padding: 0 2rem;
   margin-top: 3rem;
 }
@@ -222,7 +213,7 @@ h3 {
     top: 10rem;
     right: 3rem;
     padding: 1rem;
-    background-color: rgb(108, 0, 130);
+    background-color: var(--hire-me-button);
     border-style: solid light-grey;
     border-radius: 1rem;
     color: #ffffff;
@@ -241,7 +232,7 @@ h3 {
 }
 
 .Main-Heading {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .profession {
@@ -249,15 +240,14 @@ h3 {
 }
 
 .footer {
-  background-color: #222831;
-  max-width: 100%;
-  padding: 2rem;
+  padding: 1rem;
+  background-color: var(--footer-color);
   text-align: center;
 }
 
 button {
   background-color: #4caf50;
-  color: white;
+  color: var(--background-header-2);
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
@@ -267,6 +257,6 @@ button {
 }
 
 .button:hover {
-  box-shadow: 0 2rem 1rem 0 rgba(160, 160, 160, 0),
-    0rem 1rem 1rem 0 rgba(255, 255, 255, 0.363);
+  box-shadow: 0 2rem 1rem 0 rgba(216, 44, 44, 0),
+    0rem 1rem 1rem 0 rgba(8, 8, 8, 0.363);
 }
